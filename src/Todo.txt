@@ -1,0 +1,194 @@
+- transmog :
+	- clear all transmog items
+	- track this website for 7.3.2 changes : http://undying-wow.com/	https://github.com/iThorgrim/Client-Unity/issues
+	- unity client to contain all wow content : https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fopen-wow.fr%2F&edit-text=&act=url
+	- cool transmog NPC : http://www.ac-web.org/forums/showthread.php?147925-Trinitycore-Transmogrification
+	- for some reason, restore transmog is not working
+
+- killstreak :
+	
+- periodic events :
+	- add support for rest of the event types
+
+- personal instances :
+	- personal instance maps should have special entrance points to avoid borring walking
+	- boss list : https://zombiewow.com/boss.html
+
+- chat connector :
+	[10:09 AM] Stefan: http://www.wowdb.com/items/45912
+	- allow mods to add people to the ignore list. They will no longer be able to send to ingame messages : .mute name time
+
+- zombie apocalipse :
+	- add NPC that will cleanse the city from the plague
+	
+- endurance :
+	endurance range : is 15 yards enoyugh ? add more ?
+	
+- duel helper
+		
+- familiar
+	- allow familiars to be clickable ( add them gossip )
+	- get last visited vendor list
+	- get last visited trainer list
+	- revive 
+	- remove ress sickness
+	- bank / guild bank
+	- buy custom morphs with gold
+	- add ffa arena queue
+		
+- chat filtering addon
+	- create it : load list of words from DB that should be checked on each text
+	
+- social highscore :
+	- number of ( whispers + global + guild + say ) / 4
+	
+- hunger games :
+	- add support to bind sight to players inside the arena
+	
+- FFA arena	
+
+Ironman :
+hardcore :	
+	- DKs can't have lvl 1
+	
+- trivia :
+	
+- taxi buffs :
+	- make them be awarded dynamically. Avg kill count for server divided in 4 stages
+	
+- wow footbal :
+	- if melee strike, kick back the ball
+	- if ball lands in a zone, mark it as victory
+	
+- arena practice queue :
+	- result is not ranked
+	
+- randomized items :
+	- also randomize looks
+	- timed instances
+	- new item tiers based on amount of stats rewarded ? try to change purple color to some new color
+	- talent point mod item will add talents every time you spend them
+	- create personalized drop list ? This way the roll chance mods would be more visible
+	- paladins at lvl 32 will eat up extra 3 talents. On levelup talent will reset. If you force reset talents, it will be all good
+	- chat connector should show realm name
+	- impelent mass loot
+	- check for addon compatibility issues
+	- judgement interrupts holy light cast
+	- loot filtering
+	- summon succubus not unlearned
+	- more kite related stats
+	- NPC to reduce drop chance of stats you do not want
+	- zombalau to drop dust
+	- implement autoloot feature
+	- finish horadric cube
+	- add treasure goblins
+	- statistics which class how many hours is played
+	- when unlearning a spell, check if that class is ok to have it ? just create a static list if nothing better
+	- create a balancing sript : 
+		- create a specific setup
+		- save a specific setup
+		- reset dps score
+		- record dps score
+		- load a specific setup
+	- fancy addons for stat selection
+	- add "check all" / "uncheck all" for loot filtering
+	- black rock deapths its bugged and i cant do the arena boss
+	- chain lightning to be based on damage taken and not enemy hp pct
+	- new window for addon to show all active stats and sum of their values
+	- somehow implement instance leveling : as soon as you clear an instance at a specific difficulty, it will enable a higher level
+	- spell hit rating is a lot worse than melee hit rating. Compensate somehow ?
+	- player stat drop table could be static as long as drop chances stay the same. This is to avoid very large tables ( 6k values )
+	- insert into `character_item_randomizations` (`PlayerGUID`, `ItemGUID`, `t1`, `p1`, `t2`, `p2`, `t3`, `p3`, `t4`, `p4`, `t5`, `p5`, `t6`, `p6`, `t7`, `p7`, `t8`, `p8`, `t9`, `p9`, `t10`, `p10`, `t11`, `p11`, `t12`, `p12`, `t13`, `p13`, `t14`, `p14`, `t15`, `p15`) values('1127','333199','128','3','159','100','20','69.27','257','100','154','100','208','100','223','6.15','111','32.7','0','0','0','0','0','0','0','0','0','0','0','0','0','0');
+	- cube to be able to perform item actions. Like combine. Split. Upgrade ( blue, purple, red, golden ). Reroll
+	- check if i trade an item from equipped slot, will it remove it's effects from me ?
+	- some way to be able to link items in chat. Query based on item guid ( or owner + itemguid )
+	- after all kill targets have been cleared, clear hearthstone cooldown
+	- RI_MELEE_CRIT_DMG_PCT should affect abbilities
+	- RI_SINGLE_TARGET_TO_AOE_DMG does not work for melee abilities ?
+	- Haste has no effect on DPS for most classes ? Maybe value is too large ? Maybe it overflows ?
+	- make server wide unique stats / items -> could be rewarded to most "active" players. Maybe visual effects ? 
+	- renew does not benefit from added aura duration. Maybe there are more ?
+	- when you buy an item, it will say that you need the addon even if you have the addon ?
+	- make so craftable and stackable items stack to 100 instead 20 : update item_template set stackable = 99 where inventorytype=0 and stackable >= 20 and stackable < 100
+	- bloodlust on damage taken does not recast due to sated ?
+	- spell duration should not mod channel time ? or at least tick should happen anyway ? right now arcane missiles just freezes
+	- generate the personalized loot only once, remember for what mods it was generated, create a new if changed
+	- add UI for spending stats instead of the pig
+	- add stats to balance each class and each build for a valid DPS
+	- check if can add chat emotes to the addon
+	- check if can play music with addon
+	- note to self, NPC GUID can be obtained with LUA. Mob additional info could be shown
+	- changing instance difficulty crashes client in forge of souls
+
+- high reward system : can kill others and make them loose everything	
+- reduce arena gate times to 15 seconds
+- add a debug module that can track a specific player DPS using spells. Log what auras are active, how much DMG he does with other spells
+12:14 PM] Outl4w: Also tudi lichking fight didn’t Rez everyone for final fight		
+11:27 AM] satoor: u use haunt and deal some dot damage and use haunt again before  first huant  wear off so u recieve  much heal		
+- votekick for battlegrounds		
+- taxi to list all personal maps
+- highscores for xmog
+- highscores for mounts/pets
+- find out how to get google tasks in playstore to play a specific game that will award you X points		
+- no pvp NPC	
+- arena spectator
+- PVP statues. Updates player stats
+- script to generate heightmap for a specific map. Simple X,Y,Z
+- anti multibox script : group players by IP, kick the ones that move in formation	
+- add function to scale player stats in PVE
+- function to debug agro 
+- daca ai shadowpriest: Shadowform, Mount, Dispersion (si dai cancel la shadowform inainte sa expire dispersion), devii invisible
+- get a list of player email addresses we could spam with invites to join zombiewow, : social networking service , online community :  Habbo Hotel? Club Penguin? Neopets, Pantheon, TRF, Anomaly	
+- Wrathtail Myrmidon 3711 still drops junk loot even with .loot quest filter	
+- pvp ladder
+- make tool to extract all item IDs and names from wowhead. Create an item.dbc from it. Also check if we can find proper visuals for them	
+- ultimate enchant NPC : http://www.ac-web.org/forums/showthread.php?182347-C-Ultimate-Enchanting-NPC	
+- playerbots ? But how ? http://www.ac-web.org/forums/showthread.php?186410-Playerbots-for-4-3-4
+- guild wars : spawn a guild location, allow other guilds to raid your guild location and steal flag	
+- fix naked chars by casting x-ray spell on player	
+- disable who in arenas	
+- cool list of mods : http://www.ac-web.org/forums/showthread.php?217248-Huge-repository-of-scripts!-Now-in-Technicolor!
+	- reforging 
+	- anticheat	 
+- arena gambler system : gamble on next arena winner teams	
+- lots of scripted NPCs	
+- FFA battleground with chest in the middle. Contains a random item ?
+- free for all arena ?	isn't it like gurubashi ? maybe king of the hill ?
+- use modelviewer option for transmog shop ?	
+- add icon of race/class to global chat ?	
+- server client communication using LUA : http://www.ac-web.org/forums/showthread.php?211057-AIO-server-client-communication-system
+- VIP system : chat script with icons ?
+- nice transmog NPC : http://www.ac-web.org/forums/showthread.php?147925-Trinitycore-Transmogrification
+- maybe reuse the RAI ( random AI ) script from here : http://www.ac-web.org/forums/showthread.php?225673-RAI-System-Release-Eluna-amp-C
+- event creature type, give gold/loot on dmg. Dmg should be the drop chance roll
+- reduce arena and battleground start time
+- script to loot other player items in PVP : http://www.ac-web.org/forums/showthread.php?230459-PvPScript	
+- 1vs1 rated arenas	
+- search on google for trinity 335 exploits	
+- healbot at the entrance of instances
+- main stat on items should be based on spec : http://www.wowhead.com/item=40241/girdle-of-unity and http://www.wowhead.com/item=40745/sabatons-of-rapid-recovery for warrior	
+- account wide mounts as script ?
+- make an addon section like these guys : https://truewow.org/download
+- switch display of some NPC : 1:49 PM] Tay: Otherwise the only other thing is that Frostsaber Huntress (NPC ID# 7433) has the model of Young Frostsaber (NPC ID# 7430)
+- add unstuck 2 that ports you to maincity to avoid getting your bind position messed up
+- instant mail delivery	
+- all class patching : will need to get the sql patch, run it, restart the server, get the client patch, make a topic about it.....
+- check what kinda items does the client have from / until LOD
+		http://www.ac-web.org/forums/showthread.php?226933-Upcoming-New-Wotlk-Client
+- add poisons to taxi
+- allow duels anywhere
+- server crash idea, join many very long chat channels
+- 11:20 AM] PercsBruh: When a rogue vanishes it doesnt put them in stealth automatically so they can't use openers such as garrote or cheap shot after vanishing
+- paladin [Holy Guadiance] dont work
+	
+bugs :
+Minor
+-- An Undead's Best Friend (id: 13169) Able to feed 1(or 2) Hungering Plaguehounds continuously without having to search for new ones. 
+https://wotlk.evowow.com/?quest=13169
+-- Seeds of Chaos (id: 13172) You are able to control the Skeletal Assault Gryphon (it should auto-fly you around the Weeping Quarry as shown in https://www.youtube.com/watch?v=FmJRsvaRo90)
+https://wotlk.evowow.com/?quest=13172
+
+warlock affliction spec, spell: 
+[Haunt] https://wotlk.evowow.com/?spell=59164 Recasting 
+[Haunt] on a target does not refresh the debuff Recasting 
+[Haunt] on a target with haunt debuff causes the returned heal at the end of haunts duration to heal for crazy high amount( 300k-1million ).

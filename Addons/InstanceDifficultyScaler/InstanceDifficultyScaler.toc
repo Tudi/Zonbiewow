@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: InstanceDifficultyScaler
+## Author: Tudi
+## Notes: Set the difficulty of the next newly created instance
+## eMail: jozsab1@gmail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: LastDiffValueChar
+InstanceDifficultyScaler.lua
+

@@ -1,0 +1,21 @@
+## Interface: 30300
+## Title: RandomItemTooltip
+## Author: Tudi, MagiePie aka Tooze
+## Notes: Show non blizzlike item stats client side
+## eMail: jozsab1@gmail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: HideItemStat
+StringTools.lua
+AddonComm.lua
+RandomItemDATA.lua
+RandomItemTooltip.lua
+RandomItemPaperDoll.lua
+MoneyShield.lua
+Horadric.lua
+HideStatsOnItems.lua
+ParagonLevel.lua
+LootFiltering.lua
+TeleportLocations.lua
+InstanceDifficultyScaler.lua
+RandomItemShowStats.lua
